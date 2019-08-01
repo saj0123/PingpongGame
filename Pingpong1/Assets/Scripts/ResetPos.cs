@@ -16,6 +16,10 @@ public class ResetPos : MonoBehaviour
         if(collision.transform.CompareTag("Wall")){
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             transform.position = initialPos;
+            if (collision.transform.name == "Border")
+            {
+                Score.Scoredisplayed += 1;
+            }
         }
     }
 
