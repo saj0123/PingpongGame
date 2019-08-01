@@ -9,6 +9,14 @@ public class BatMovement : MonoBehaviour
     public float force = 10;
 
     bool hitting;
+
+    Vector3 aimTargetInitialPosition;
+
+    void Start(){
+        aimTargetInitialPosition = aimTarget.position;
+
+    }
+
     void Update(){
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical"); 
@@ -36,6 +44,8 @@ public class BatMovement : MonoBehaviour
             other.GetComponent<Rigidbody>().velocity = dir.normalized * force + new Vector3(0, 5, 0);
             Debug.Log("Hit the ball");
         }
+
+        aimTarget.position = aimTargetInitialPosition;
     }
 
 }
