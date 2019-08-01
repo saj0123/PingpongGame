@@ -6,7 +6,7 @@ public class BatMovement : MonoBehaviour
 {
     public Transform aimTarget;
     public float moveSpeed = 0.5f; 
-    public float force = 10;
+    public float force = 10f;
 
     bool hitting;
 
