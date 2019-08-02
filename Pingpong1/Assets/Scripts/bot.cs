@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bot : MonoBehaviour
+public class AIbot : MonoBehaviour
 {
     public float speed = 10;
     public Transform Ball;
