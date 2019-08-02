@@ -8,7 +8,7 @@ public class bot : MonoBehaviour
     public Transform Ball;
     public Transform aimTarget;
 
-    public float force = 10;
+    public float force = 10f;
 
     Vector3 targetPosition; 
     // Start is called before the first frame update
