@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,6 +26,7 @@ public class bot : MonoBehaviour
 
     void Move(){
         targetPosition.z = Ball.position.z;
+        targetPosition.y = Ball.position.y;
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
     }
 
