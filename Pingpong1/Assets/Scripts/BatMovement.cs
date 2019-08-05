@@ -7,6 +7,7 @@ public class BatMovement : MonoBehaviour
     public Transform aimTarget;
     public float moveSpeed = 0.5f; 
     public float force = 10f;
+    public AudioSource tickSource1;
 
     bool hitting;
 
@@ -14,7 +15,7 @@ public class BatMovement : MonoBehaviour
 
     void Start(){
         aimTargetInitialPosition = aimTarget.position;
-
+        tickSource1 = GetComponent<AudioSource>();
     }
 
     void Update(){
@@ -42,6 +43,7 @@ public class BatMovement : MonoBehaviour
         if(other.CompareTag("Ball")){
             Vector3 dir = aimTarget.position - transform.position;
             other.GetComponent<Rigidbody>().velocity = dir.normalized * force + new Vector3(0, 5, 0);
+            tickSource1.Play();
         }
 
         aimTarget.position = aimTargetInitialPosition;

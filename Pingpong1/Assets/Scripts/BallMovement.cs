@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour
 {
+    public AudioSource tickSource1;
     public Rigidbody rb;
-   
+    void Start()
+
+    {
+        tickSource1 = GetComponent<AudioSource>();
+    }
+
     public float fowardForce = 100f;
     // Update is called once per frame
     void FixedUpdate()
@@ -15,6 +21,7 @@ public class BallMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other){
         if(other.CompareTag("Bat")){
+            tickSource1.Play();
         }
     }
   
