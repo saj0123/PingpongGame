@@ -42,7 +42,6 @@ public class BatMovement : MonoBehaviour
         if(other.CompareTag("Ball")){
             Vector3 dir = aimTarget.position - transform.position;
             other.GetComponent<Rigidbody>().velocity = dir.normalized * force + new Vector3(0, 5, 0);
-            Debug.Log("Hit the ball");
         }
 
         aimTarget.position = aimTargetInitialPosition;
