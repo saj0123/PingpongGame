@@ -8,8 +8,6 @@ public class BatMovement : MonoBehaviour
     public float moveSpeed = 0.5f; 
     public float force = 10f;
 
-    public Transform[] targets;
-
     bool hitting;
 
     Vector3 aimTargetInitialPosition;
