@@ -11,42 +11,39 @@ public class BatMovement : MonoBehaviour
 
     bool hitting;
 
-    Vector3 aimTargetInitialPosition;
+    Vector3 aimTargetPosition;
+
+    public Transform[] targets;
 
     void Start(){
-        aimTargetInitialPosition = aimTarget.position;
-        tickSource1 = GetComponent<AudioSource>();
+      aimTargetPosition = aimTarget.position; 
+      tickSource1 = GetComponent<AudioSource>();
     }
 
     void Update(){
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical"); 
 
-        if(Input.GetKeyDown(KeyCode.F)){
-            hitting = true; 
-        }else if(Input.GetKeyUp(KeyCode.F)){
-            hitting = false; 
-        }
-
-        if(hitting ){
-            aimTarget.Translate(new Vector3(0, 0, h) * moveSpeed * Time.deltaTime);
-        }
-
-        if((h != 0 || v!=0) && !hitting){
+        if((h != 0 || v!=0)){
             transform.Translate(new Vector3 (h, 0, v) * moveSpeed * Time.deltaTime );
             //transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, moveSpeed * Input.GetAxisRaw("Vertical") * Time.deltaTime);
         }
 
     }
 
+    Vector3 PickTarget(){
+        int randomValue = Random.Range(0, targets.Length);
+        return targets[randomValue].position;
+    }
+
     private void OnTriggerEnter(Collider other){
         if(other.CompareTag("Ball")){
-            Vector3 dir = aimTarget.position - transform.position;
+            Vector3 dir = PickTarget() - transform.position;
             other.GetComponent<Rigidbody>().velocity = dir.normalized * force + new Vector3(0, 5, 0);
             tickSource1.Play();
         }
 
-        aimTarget.position = aimTargetInitialPosition;
+     
     }
 
 }
