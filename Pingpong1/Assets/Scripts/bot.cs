@@ -14,12 +14,14 @@ public class bot : MonoBehaviour
 
     public Transform[] targets; 
 
+
     Vector3 targetPosition; 
     // Start is called before the first frame update
     void Start()
     {
         targetPosition = transform.position;
         tickSource2 = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -45,6 +47,7 @@ public class bot : MonoBehaviour
             other.GetComponent<Rigidbody>().velocity = dir.normalized * force + new Vector3(0, 5, 0);
             Debug.Log("Hit the ball");
             tickSource2.Play();
+            
         }
     }
 }
