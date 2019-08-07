@@ -3207,7 +3207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11419562, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
       propertyPath: m_SceneToLoad
-      value: Alt_Scene
+      value: Alt-Scene
       objectReference: {fileID: 0}
     - target: {fileID: 8287798, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
       propertyPath: m_audioClip
