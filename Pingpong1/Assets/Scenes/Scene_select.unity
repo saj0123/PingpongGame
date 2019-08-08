@@ -1187,7 +1187,7 @@ PrefabInstance:
     - target: {fileID: 2389452, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6d4867c0f95b56b4189052cfc30659f0, type: 2}
+      objectReference: {fileID: 2100000, guid: e9f3133bedfdf704d949f6ca9ab4cffa, type: 2}
     - target: {fileID: 2389452, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -3207,7 +3207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11419562, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
       propertyPath: m_SceneToLoad
-      value: Alt_Game
+      value: Alt-Scene
       objectReference: {fileID: 0}
     - target: {fileID: 8287798, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
       propertyPath: m_audioClip
