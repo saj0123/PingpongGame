@@ -2260,7 +2260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998502449}
   m_LocalRotation: {x: -0, y: -0, z: -7.1054265e-15, w: 1}
-  m_LocalPosition: {x: 2.5900002, y: 1.868, z: 0.50000006}
+  m_LocalPosition: {x: 2.76, y: 1.868, z: 0.50000006}
   m_LocalScale: {x: 0.50000024, y: 0.001, z: 0.50000024}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2732,7 +2732,7 @@ GameObject:
   - component: {fileID: 1186515957}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3541,7 +3541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412448567}
   m_LocalRotation: {x: -0, y: -0, z: -0.21531767, w: 0.97654414}
-  m_LocalPosition: {x: 12.13023, y: -0.5608268, z: -3.4913766}
+  m_LocalPosition: {x: 12.5, y: -0.73, z: -3.4913766}
   m_LocalScale: {x: 0.10000002, y: 3, z: 7}
   m_Children: []
   m_Father: {fileID: 810854517}
@@ -5440,7 +5440,7 @@ PrefabInstance:
     - target: {fileID: 876574435345760310, guid: 5f473c2f0c9b85646bdd73866c73be29,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.64
+      value: 2.81
       objectReference: {fileID: 0}
     - target: {fileID: 876574435345760310, guid: 5f473c2f0c9b85646bdd73866c73be29,
         type: 3}
